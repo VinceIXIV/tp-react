@@ -1,14 +1,18 @@
 import React from 'react';
 import '../styles/index.scss';
+import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>It Works!</h1>
-        <p>This React project just works including <span className="redBg">module</span> local styles.</p>
-        <p>Enjoy!</p>
-      </div>
+			<MuiThemeProvider>
+				<AppBar
+					title="Mon app"
+					iconClassNameRight="muidocs-icon-navigation-expand-more"
+				/>
+			</MuiThemeProvider>
     )
   }
 }
